@@ -1,7 +1,22 @@
-<% content_for :title, "Seu Lanche | Venda mais pelo seu próprio canal" %>
-<% content_for :body_class, "landing-page" %>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Um cardápio digital bonito, pedidos organizados e uma operação que trabalha por você.">
+  <title>Seu Lanche | Venda mais pelo seu próprio canal</title>
+  <style>
+/*
+ * This is a manifest file that'll be compiled into application.css.
+ *
+ * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
+ * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
+ * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
+ * depending on specificity.
+ *
+ * Consider organizing styles into separate files for maintainability.
+ */
 
-<style>
 .landing-page { background: #f8f8f6; color: #172033; }
 .landing-page main { max-width: none; padding: 0; }
 .landing-page footer { display: none; }
@@ -43,8 +58,9 @@
 .landing-cta { padding: 100px 20px; background: #ff7447; color: #fff; text-align: center; }.landing-cta .landing-kicker { color: #ffe1d7; }.landing-cta h2 { margin-bottom: 15px; }.landing-cta h2 em { color: #172033; }.landing-cta p { max-width: 430px; margin: 0 auto 25px; color: #fff; opacity: .85; }.landing-button-light { background: #172033; color: #fff; }.landing-cta small { display: block; margin-top: 15px; color: #ffe1d7; font-size: 11px; }
 @media (max-width: 800px) { .landing-hero { padding-top: 48px; }.landing-hero-grid, .landing-process-grid { grid-template-columns: 1fr; gap: 45px; }.landing-hero-grid { padding-bottom: 55px; }.landing-dashboard { max-width: 560px; margin: 0 auto; }.landing-trust { flex-wrap: wrap; gap: 12px 20px; }.landing-trust span { flex-basis: 100%; text-align: center; }.landing-section { padding: 75px 0; }.landing-process-grid { gap: 35px; }.landing-feature-grid { grid-template-columns: 1fr; }.landing-feature-card p { min-height: 0; } }
 @media (max-width: 480px) { .landing-container { width: min(100% - 28px, 1120px); }.landing-hero h1 { font-size: 43px; }.landing-lead { font-size: 15px; }.landing-actions .landing-button { width: 100%; }.landing-dashboard { border-width: 4px; transform: none; }.landing-dashboard-body { padding: 16px; }.landing-orders div { grid-template-columns: .6fr 1.1fr .8fr; }.landing-orders i { display: none; } }
-</style>
-
+  </style>
+</head>
+<body class="landing-page">
 <div class="landing-wrap">
   <section class="landing-hero">
     <div class="landing-hero-glow landing-hero-glow-one" aria-hidden="true"></div>
@@ -58,12 +74,12 @@
           Tudo em um só lugar, sem complicação.
         </p>
         <div class="landing-actions">
-          <%= link_to signup_path, class: "landing-button landing-button-primary" do %>
+          <a href="/signup" class="landing-button landing-button-primary">
             Criar meu cardápio grátis <span aria-hidden="true">→</span>
-          <% end %>
-          <%= link_to new_user_session_path, class: "landing-button landing-button-ghost" do %>
+          </a>
+          <a href="/users/sign_in" class="landing-button landing-button-ghost">
             Já sou cliente
-          <% end %>
+          </a>
         </div>
         <p class="landing-note"><span aria-hidden="true">✓</span> Comece grátis. Sem cartão de crédito.</p>
       </div>
@@ -140,7 +156,7 @@
         <span class="landing-kicker">Do seu jeito, no seu ritmo</span>
         <h2>Seu negócio funcionando <em>mais leve.</em></h2>
         <p>Começar é simples. Em poucos minutos você cadastra seus produtos, compartilha seu link e já pode receber pedidos.</p>
-        <%= link_to "Começar agora", signup_path, class: "landing-button landing-button-primary" %>
+        <a href="/signup" class="landing-button landing-button-primary">Começar agora</a>
       </div>
       <div class="landing-steps">
         <div><b>01</b><span><strong>Monte seu cardápio</strong><br>Cadastre produtos, adicionais e horários.</span></div>
@@ -155,8 +171,10 @@
       <span class="landing-kicker">Pronto para o próximo pedido?</span>
       <h2>Coloque seu negócio<br><em>na frente.</em></h2>
       <p>Tenha as ferramentas certas para vender mais e cuidar do que realmente importa.</p>
-      <%= link_to "Criar meu cardápio grátis  →", signup_path, class: "landing-button landing-button-light" %>
+      <a href="/signup" class="landing-button landing-button-light">Criar meu cardápio grátis  →</a>
       <small>15 dias para experimentar todos os recursos.</small>
     </div>
   </section>
 </div>
+</body>
+</html>
