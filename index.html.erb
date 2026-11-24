@@ -1,0 +1,118 @@
+<% content_for :title, "Seu Lanche | Venda mais pelo seu próprio canal" %>
+<% content_for :body_class, "landing-page" %>
+
+<div class="landing-wrap">
+  <section class="landing-hero">
+    <div class="landing-hero-glow landing-hero-glow-one" aria-hidden="true"></div>
+    <div class="landing-hero-glow landing-hero-glow-two" aria-hidden="true"></div>
+    <div class="landing-container landing-hero-grid">
+      <div class="landing-hero-copy">
+        <span class="landing-eyebrow"><span class="landing-eyebrow-dot"></span> A plataforma do seu negócio</span>
+        <h1>Seu restaurante merece <em>vender mais.</em></h1>
+        <p class="landing-lead">
+          Um cardápio digital bonito, pedidos organizados e uma operação que trabalha por você.
+          Tudo em um só lugar, sem complicação.
+        </p>
+        <div class="landing-actions">
+          <%= link_to signup_path, class: "landing-button landing-button-primary" do %>
+            Criar meu cardápio grátis <span aria-hidden="true">→</span>
+          <% end %>
+          <%= link_to new_user_session_path, class: "landing-button landing-button-ghost" do %>
+            Já sou cliente
+          <% end %>
+        </div>
+        <p class="landing-note"><span aria-hidden="true">✓</span> Comece grátis. Sem cartão de crédito.</p>
+      </div>
+
+      <div class="landing-dashboard" aria-label="Prévia do painel Seu Lanche">
+        <div class="landing-dashboard-bar">
+          <div class="landing-brand-mark">S</div>
+          <div>
+            <strong>Seu Lanche</strong>
+            <span>Painel do restaurante</span>
+          </div>
+          <span class="landing-status"><i></i> Loja aberta</span>
+        </div>
+        <div class="landing-dashboard-body">
+          <div class="landing-dashboard-heading">
+            <div>
+              <span>Visão geral</span>
+              <h2>Bom dia, parceiro! 👋</h2>
+            </div>
+            <span class="landing-period">Este mês⌄</span>
+          </div>
+          <div class="landing-metrics">
+            <div><span>Vendas</span><strong>R$ 8.420,00</strong><small>↗ 18,4%</small></div>
+            <div><span>Pedidos</span><strong>248</strong><small>↗ 12,1%</small></div>
+          </div>
+          <div class="landing-chart">
+            <div class="landing-chart-label"><span>Vendas por dia</span><strong>R$ 2.840,00</strong></div>
+            <svg viewBox="0 0 420 120" role="img" aria-label="Gráfico de vendas em alta">
+              <path class="landing-chart-fill" d="M0 104 C35 98 48 78 82 87 S122 66 155 79 S195 48 228 62 S272 28 308 47 S353 29 420 8 V120 H0 Z"></path>
+              <path class="landing-chart-line" d="M0 104 C35 98 48 78 82 87 S122 66 155 79 S195 48 228 62 S272 28 308 47 S353 29 420 8"></path>
+            </svg>
+          </div>
+          <div class="landing-orders">
+            <span>Pedidos recentes</span><a href="#recursos">Ver todos</a>
+            <div><b>#1048</b><span>Combo da casa</span><strong>R$ 42,90</strong><i>Em preparo</i></div>
+            <div><b>#1047</b><span>2x X-Salada</span><strong>R$ 35,00</strong><i class="ready">Pronto</i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="landing-trust">
+      <span>Feito para quem vive de servir bem</span>
+      <div><b>●</b> Lanchonetes</div><div><b>●</b> Pizzarias</div><div><b>●</b> Restaurantes</div><div><b>●</b> Food trucks</div>
+    </div>
+  </section>
+
+  <section class="landing-section landing-promise" id="recursos">
+    <div class="landing-container">
+      <div class="landing-section-heading">
+        <span class="landing-kicker">Tudo no seu controle</span>
+        <h2>Menos tempo apagando incêndio.<br><em>Mais tempo fazendo seu negócio crescer.</em></h2>
+        <p>O Seu Lanche simplifica a rotina da sua equipe e deixa cada pedido fluir do cardápio até a cozinha.</p>
+      </div>
+      <div class="landing-feature-grid">
+        <article class="landing-feature-card">
+          <span class="landing-feature-icon orange">⌁</span><h3>Venda direto</h3>
+          <p>Tenha seu próprio canal de pedidos e fortaleça o relacionamento com seus clientes.</p><a href="#comece">Conheça o cardápio <span>→</span></a>
+        </article>
+        <article class="landing-feature-card">
+          <span class="landing-feature-icon blue">✓</span><h3>Organize a operação</h3>
+          <p>Pedidos, caixa e cozinha alinhados para sua equipe trabalhar com mais agilidade.</p><a href="#comece">Veja como funciona <span>→</span></a>
+        </article>
+        <article class="landing-feature-card">
+          <span class="landing-feature-icon yellow">↗</span><h3>Cresça com clareza</h3>
+          <p>Acompanhe seus resultados e tome decisões melhores para vender cada vez mais.</p><a href="#comece">Quero crescer <span>→</span></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="landing-section landing-process">
+    <div class="landing-container landing-process-grid">
+      <div>
+        <span class="landing-kicker">Do seu jeito, no seu ritmo</span>
+        <h2>Seu negócio funcionando <em>mais leve.</em></h2>
+        <p>Começar é simples. Em poucos minutos você cadastra seus produtos, compartilha seu link e já pode receber pedidos.</p>
+        <%= link_to "Começar agora", signup_path, class: "landing-button landing-button-primary" %>
+      </div>
+      <div class="landing-steps">
+        <div><b>01</b><span><strong>Monte seu cardápio</strong><br>Cadastre produtos, adicionais e horários.</span></div>
+        <div><b>02</b><span><strong>Compartilhe seu link</strong><br>Coloque nas redes sociais e no WhatsApp.</span></div>
+        <div><b>03</b><span><strong>Receba e organize</strong><br>Acompanhe tudo em um único painel.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="landing-cta" id="comece">
+    <div class="landing-container">
+      <span class="landing-kicker">Pronto para o próximo pedido?</span>
+      <h2>Coloque seu negócio<br><em>na frente.</em></h2>
+      <p>Tenha as ferramentas certas para vender mais e cuidar do que realmente importa.</p>
+      <%= link_to "Criar meu cardápio grátis  →", signup_path, class: "landing-button landing-button-light" %>
+      <small>15 dias para experimentar todos os recursos.</small>
+    </div>
+  </section>
+</div>
